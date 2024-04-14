@@ -1,5 +1,5 @@
 import { Body, Controller, Headers, Post } from "@nestjs/common";
-import { RegisterInput } from "../../entities/inputs/register.input";
+import { RegisterInput } from "../../entities/inputs/register.dto";
 import { RegisterResponse } from "../../entities/responses/register.response";
 import { AcquireTokensInput } from "../../entities/inputs/acquire-tokens.input";
 import { TokensResponse } from "../../entities/responses/tokens.response";
