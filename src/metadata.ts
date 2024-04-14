@@ -1,0 +1,8 @@
+/* eslint-disable */
+export default async () => {
+    const t = {
+        ["./entities/responses/register.response"]: await import("./entities/responses/register.response"),
+        ["./entities/responses/tokens.response"]: await import("./entities/responses/tokens.response")
+    };
+    return { "@nestjs/swagger": { "models": [[import("./entities/inputs/register.input"), { "RegisterInput": { globalBrandId: { required: true, type: () => String, minLength: 1, maxLength: 128 }, globalBrandName: { required: true, type: () => String, minLength: 1, maxLength: 128 } } }], [import("./entities/responses/register.response"), { "RegisterResponse": { key: { required: true, type: () => String }, keyId: { required: true, type: () => String } } }], [import("./entities/inputs/acquire-tokens.input"), { "AcquireTokensInput": { keyId: { required: true, type: () => String, minLength: 1, maxLength: 128 }, key: { required: true, type: () => String, minLength: 12, maxLength: 512 } } }], [import("./entities/responses/tokens.response"), { "TokensResponse": { accessToken: { required: true, type: () => String }, refreshToken: { required: true, type: () => String } } }]], "controllers": [[import("./controllers/auth/auth.controller"), { "AuthController": { "register": { type: t["./entities/responses/register.response"].RegisterResponse }, "login": { type: t["./entities/responses/tokens.response"].TokensResponse } } }]] } };
+};

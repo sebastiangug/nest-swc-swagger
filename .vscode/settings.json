@@ -1,0 +1,8 @@
+{
+  "explorer.sortOrder": "filesFirst",
+  "workbench.tree.indent": 20,
+  "workbench.editor.labelFormat": "short",
+  "explorer.compactFolders": false,
+  "files.eol": "\n",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
